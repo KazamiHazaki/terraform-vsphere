@@ -136,5 +136,3 @@ To bypass the vCenter login prompt, you can set your vCenter password as an envi
 After setting the `TF_VAR_vsphere_password` environment variable, you can proceed to use Terraform to deploy VMs as described in the previous sections of this README.
 
 ---
-
-This addition to your README explains how to set the `TF_VAR_vsphere_password` environment variable to automate the vCenter login process when using Terraform to deploy VMs. It's important to handle sensitive passwords securely and avoid exposing them unintentionally.
