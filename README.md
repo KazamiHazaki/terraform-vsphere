@@ -7,12 +7,40 @@
 
 This guide demonstrates how to use Terraform to deploy virtual machines (VMs) in a vSphere environment using a template VM. Terraform automates the provisioning process and allows you to create multiple VMs based on the template.
 
+
+### Environment Overview
+
+This Terraform configuration is designed to deploy virtual machines (VMs) in a vSphere environment. Below are some key details about the environment in which these VMs will be deployed:
+
+- **Cluster**: The vSphere environment consists of a single cluster with a total of 35 hosts. Each host has a unique IP address within the range of `192.168.1.2` to `192.168.1.36`.
+
+- **Host IP Range**: The host IP addresses start from `192.168.1.2`, and each host is assigned a unique IP address incrementing sequentially.
+
+- **VM Placement**: The VMs will be installed on these hosts based on the IP address of each host. For example, if a VM is being deployed, it will be placed on the host with the IP address that corresponds to the VM's position in the list of VMs.
+
+   - VM 1 will be placed on the host with IP `192.168.1.2`.
+   - VM 2 will be placed on the host with IP `192.168.1.3`.
+   - VM 3 will be placed on the host with IP `192.168.1.4`.
+   - And so on, up to VM 35, which will be placed on the host with IP `192.168.1.36`.
+
+- **VM IP Addresses**: VM IP addresses will start from `192.168.1.37` and increment sequentially for each VM.
+
+### Usage
+
+After configuring your Terraform environment, including setting the required variables and exporting the vCenter password, you can proceed to use Terraform to deploy VMs based on the provided environment details.
+
+---
+
+
 ### Software Versions
 
 - Terraform: v1.5.6
 - Terraform vSphere Provider: v2.4.2
 - vCenter: 8
 - Template VM: RHEL 9
+Thank you for the clarification. If your VM IP addresses start from `192.168.1.37`, you can update the relevant section in your README accordingly:
+
+---
 
 ## Prerequisites
 
