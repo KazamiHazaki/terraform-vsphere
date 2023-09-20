@@ -46,7 +46,7 @@ After configuring your Terraform environment, including setting the required var
 - Terraform vSphere Provider: v2.4.2
 - vCenter: 8
 - Template VM: RHEL 9
-Thank you for the clarification. If your VM IP addresses start from `192.168.1.37`, you can update the relevant section in your README accordingly:
+
 
 ---
 
