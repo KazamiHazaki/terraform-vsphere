@@ -115,4 +115,26 @@ Before getting started, make sure you have the following in place:
 
 ---
 
-This README provides a high-level overview of how to use Terraform with vSphere to deploy VMs based on a template. Make sure to replace the placeholders with your specific configuration details, and follow the Terraform commands for provisioning your VMs.
+### Automated vCenter Login
+
+To bypass the vCenter login prompt, you can set your vCenter password as an environment variable. Follow these steps:
+
+1. Open your command-line terminal.
+
+2. Run the following command to export your vCenter password as an environment variable:
+
+   ```sh
+   export TF_VAR_vsphere_password="your-vcenter-password"
+   ```
+
+   Replace `"your-vcenter-password"` with your actual vCenter password.
+
+   **Note**: Be cautious when using environment variables to store sensitive information. Ensure that you handle the password securely and do not expose it unintentionally.
+
+### Usage
+
+After setting the `TF_VAR_vsphere_password` environment variable, you can proceed to use Terraform to deploy VMs as described in the previous sections of this README.
+
+---
+
+This addition to your README explains how to set the `TF_VAR_vsphere_password` environment variable to automate the vCenter login process when using Terraform to deploy VMs. It's important to handle sensitive passwords securely and avoid exposing them unintentionally.
