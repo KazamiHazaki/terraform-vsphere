@@ -10,6 +10,14 @@ This guide demonstrates how to use Terraform to deploy virtual machines (VMs) in
 
 ### Environment Overview
 
+| Configuration       | Information                      |
+|----------------------|----------------------------------|
+| vCenter Domain      | kazami-lab-vcenter.local         |
+| vCenter User        | kazamihazaki@vsphere.local       |
+| Host IP Range       | 192.168.1.2 - 192.168.1.36       |
+| VM IP Range         | 192.168.1.37 and subsequent IPs  |
+
+
 This Terraform configuration is designed to deploy virtual machines (VMs) in a vSphere environment. Below are some key details about the environment in which these VMs will be deployed:
 
 - **Cluster**: The vSphere environment consists of a single cluster with a total of 35 hosts. Each host has a unique IP address within the range of `192.168.1.2` to `192.168.1.36`.
